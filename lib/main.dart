@@ -52,7 +52,10 @@ class _GlassesRecommendationState extends State<GlassesRecommendation>
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.indigo.shade900, Colors.purple.shade800],
+            colors: [
+              const Color.fromARGB(255, 8, 24, 202),
+              const Color.fromARGB(232, 19, 2, 247)
+            ],
           ),
         ),
         child: SafeArea(
@@ -65,7 +68,9 @@ class _GlassesRecommendationState extends State<GlassesRecommendation>
                       floating: false,
                       pinned: true,
                       flexibleSpace: FlexibleSpaceBar(
-                        title: Text('iGlasses'),
+                        title: Text(
+                          'iGlasses',
+                        ),
                         background: AnimatedBuilder(
                           animation: _controller,
                           builder: (_, child) {
@@ -181,7 +186,7 @@ class GlassesCard extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqWpMp4imhklOtFxWhKSHUyMrz0hSmTWhCIw&s"),
+                      "https://down-id.img.susercontent.com/file/d5e9eda885537922e1bf38a6a5dd27f7"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -193,11 +198,9 @@ class GlassesCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Glasses Model ${index + 1}',
+                  'Model Kacamata ${index + 1}',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                Text('\$${(index + 1) * 50}',
-                    style: TextStyle(color: Colors.green)),
               ],
             ),
           ),
